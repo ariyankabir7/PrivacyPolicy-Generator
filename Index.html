@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        body {
+            background: url("bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-container {
+            border-left: 1px solid #6179ff;
+            border-right: 1px solid #6179ff;
+            width: 370px;
+        }
+
+        .bilder {
+            font-weight: bolder;
+        }
+
+        .top-card {
+            background-color: #6179ff;
+            color: #ffffff;
+            border-radius: 15px;
+            text-align: center;
+
+            margin: 0 30px;
+            font-size: 13px;
+        }
+
+        .top-header {
+            background: url("header_bg.png") no-repeat center;
+            background-size: cover;
+            text-align: center;
+
+        }
+
+        .sub-head {
+            font-size: 10px;
+            color: #6179ff;
+            text-align: center;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: -3px;
+
+        }
+
+        .person {
+            margin: 10px 5px;
+        }
+
+        .blue-card {
+
+            background-color: #6179ff;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            border-radius: 12px;
+            padding: 10px 5px;
+        }
+
+        .input-box {
+            background-color: #8c9af6;
+            width: 90%;
+        }
+
+        .btn-gen {
+            background-color: #5ecb3e;
+            color: white;
+        }
+
+        .btn-gen:hover {
+            background-color: #2ba705;
+            color: white;
+            /* New background color on hover */
+        }
+
+        .btn-pre {
+            border: 2px solid #5ecb3e;
+            color: black;
+        }
+
+        .btn-pre:hover {
+            background-color: #2ba705;
+            color: white;
+            /* New background color on hover */
+        }
+
+        .check-boxes {
+            background-color: white;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            border-radius: 8px;
+
+        }
+
+        @media screen and (max-width: 480px) {
+            .main-container {
+                width: 100%;
+            }
+        }
+
+        ::placeholder {
+            color: white !important;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        ::-ms-input-placeholder {
+            /* Edge 12 -18 */
+            color: white !important;
+        }
+
+        input:focus {
+            background-color: #6179ff !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container d-flex flex-column align-items-center justify-content-center" id="firstDiv">
+        <div class="top-card my-3 px-4">Why Fear When We're here?</div>
+        <div class="top-header py-3">
+            <h2 class="bilder">App Privacy Policy<br>Generator</h2>
+            <span class="sub-head mx-5 ">Generate a generic Privacy Policy and </span>
+            <span class="sub-head mx-5"> Terms
+                & Conditions
+                for your apps</span>
+        </div>
+
+        <img class="person" src="person.png" width="180px" />
+
+        <div class="blue-card my-1">
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">App Name</label>
+            <input type="text" class="form-control input-box mx-2 " id="appName"
+                placeholder="Please provide an App Name!">
+
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Contact Information</label>
+            <input type="text" class="form-control input-box mx-2 " id="contact" placeholder="Email Address">
+
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Personally Identifiable
+                Information</label>
+            <input type="text" class="form-control input-box mx-2 " id="personalInfo"
+                placeholder="Personally Identifiable Information you">
+
+
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">App Type</label>
+            <select class="form-select input-box mx-2 text-white " aria-label="Default select example" id="appType">
+                <option value="">Select app type</option>
+                <option value="a Free">Free</option>
+                <option value="an Open Source">Open Source</option>
+                <option value="a Freemium">Freemium</option>
+                <option value="an Ad Supported">Ad Supported</option>
+                <option value="a Commercial">Commercial</option>
+            </select>
+
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Mobile OS</label>
+            <select class="form-select input-box mx-2 text-white " aria-label="Default select example" id="osType">
+                <option value="">Select mobile OS</option>
+                <option value="Android">Android</option>
+                <option value="iOS">iOS</option>
+                <option value="KaiOS">KaiOS</option>
+                <option value="Android, iOS">Android &amp; iOS</option>
+                <option value="Android, iOS, KaiOS">Android, iOS &amp; KaiOS</option>
+            </select>
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Policy Effective Date</label>
+            <input type="date" class="form-control input-box mx-2 text-white" id="policydate"
+                placeholder="Personally Identifiable Information you">
+
+
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Owner Type</label>
+            <select class="form-select input-box mx-2 text-white " aria-label="Default select example" onchange="by()"
+                id="ownerType">
+
+                <option value="">Select owner type</option>
+                <option value="my">Individual</option>
+                <option value="our">Company</option>
+            </select>
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Developed by</label>
+
+            <div class="by">
+                <input type="text" class="form-control input-box mx-2 text-white" id="developedBy"
+                    placeholder="Developer Name">
+
+
+            </div>
+        </div>
+        <div class="mt-1 w-75  " id="error-box">
+
+        </div>
+
+        <button class="btn btn-gen mb-5 mt-1 px-4" onclick="next1()">Next Step</button>
+
+    </div>
+
+
+    <div class="main-container flex-column align-items-center justify-content-center" style="display: none !important;"
+        id="secondDiv">
+
+        <div class="top-card my-3 px-4">Why Fear When We're here?</div>
+        <div class="top-header py-3">
+            <h2 class="bilder">App Privacy Policy<br>Generator</h2>
+            <span class="sub-head mx-5 ">Generate a generic Privacy Policy and </span>
+            <span class="sub-head mx-5"> Terms
+                & Conditions
+                for your apps</span>
+        </div>
+
+        <img class="person" src="person.png" width="180px" />
+
+        <div class="blue-card my-1">
+            <label for="exampleFormControlInput1" class="form-label mt-1 mx-2 text-white ">Include links to Third Party
+                Services</label>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <img src="./gps.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Google Play Services
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./admob.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    AdMob
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./firebase.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Google Analytics for Firebase
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./firebase.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Firebase Crashlytics
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./facebook.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Facebook
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./fabric.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Fabric
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./piwik.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Matomo
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./clicky.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Clicky
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./flurry.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Flurry Analytics
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./appodeal.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Appodeal
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./fathom.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Fathom Analytics
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./unity.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Unity
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./sdkbox.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    SDKBOX
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./gameanalytics.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    GameAnalytics
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./one_signal.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    One Signal
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./expo.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Expo
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./sentry.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Sentry
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./applovin.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    AppLovin
+                </label>
+            </div>
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./vungle.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Vungle
+                </label>
+            </div>
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./startapp.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    StartApp
+                </label>
+            </div>
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./adcolony.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    AdColony
+                </label>
+            </div>
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./amplitude.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Amplitude
+                </label>
+            </div>
+
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./adjust.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Adjust
+                </label>
+            </div>
+
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./mapbox.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Mapbox
+                </label>
+            </div>
+
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./godot.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Godot
+                </label>
+            </div>
+
+
+
+            <div class="form-check mx-2 check-boxes mt-2">
+                <input style="margin-left: -12px; margin-right: 5px; border: 2px solid !important;"
+                    class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <img src="./segment.png" width="20px" class="mx-1 mb-1 "> <label class="form-check-label"
+                    for="flexCheckChecked">
+                    Segment
+                </label>
+            </div>
+
+
+
+        </div>
+        <div class="d-flex">
+            <button class="btn btn-pre mb-5 mt-1 px-4" onclick="previous1()">Previous</button>
+            <button class="btn btn-gen mb-5 mt-1 mx-3 px-4" onclick="next2()">Next Step</button>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <script>
+        function by() {
+            var selectBox = document.getElementById("ownerType");
+            var textBox = document.getElementById("developedBy");
+
+            var selectedOption = selectBox.value;
+
+            if (selectedOption === "my") {
+                textBox.placeholder = "Developer Name";
+            } else if (selectedOption === "our") {
+                textBox.placeholder = "Company Name";
+            }
+        }
+
+        function next1() {
+            var firstDiv = document.getElementById("firstDiv");
+            var secondDive = document.getElementById("secondDiv")
+            var errorDiv = document.getElementById("error-box")
+
+            var appName = document.getElementById("appName").value;
+            var contact = document.getElementById("contact").value;
+            var personalInfo = document.getElementById("personalInfo").value;
+            var appType = document.getElementById("appType").value;
+            var osType = document.getElementById("osType").value;
+            var policydate = document.getElementById("policydate").value;
+            var ownerType = document.getElementById("ownerType").value;
+            var developedBy = document.getElementById("developedBy").value;
+
+            if (appName === "" ||
+                contact === "" ||
+                personalInfo === "" ||
+                appType === "" ||
+                osType === "" ||
+                policydate === "" ||
+                ownerType === "" ||
+                developedBy === "") {
+                errorDiv.innerHTML = '<div class = "alert alert-danger "role = "alert" >Fill All The Details !!</div>'
+            } else {
+                firstDiv.style.setProperty("display", "none", "important");
+                secondDiv.style.display = "flex";
+
+            }
+
+
+
+
+
+        }
+
+        function previous1() {
+            var firstDiv = document.getElementById("firstDiv");
+            var secondDive = document.getElementById("secondDiv")
+            secondDiv.style.setProperty("display", "none", "important");
+            firstDiv.style.display = "flex";
+        }
+
+        function next2() {
+            // Get the input values from the form
+            var appName = document.getElementById("appName").value;
+            var contact = document.getElementById("contact").value;
+            var personalInfo = document.getElementById("personalInfo").value;
+            var appType = document.getElementById("appType").value;
+            var osType = document.getElementById("osType").value;
+            var policydate = document.getElementById("policydate").value;
+            var ownerType = document.getElementById("ownerType").value;
+            var developedBy = document.getElementById("developedBy").value;
+
+            // Prepare the data to send
+            var data = {
+                appName: appName,
+                contact: contact,
+                personalInfo: personalInfo,
+                appType: appType,
+                osType: osType,
+                policydate: policydate,
+                ownerType: ownerType,
+                developedBy: developedBy,
+                // Add other data as needed
+            };
+            alert(data)
+            // Make an AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "generate.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Handle the response from the server, e.g., display the generated privacy policy
+                    var response = xhr.responseText;
+                    // Do something with the response, like displaying it on the page
+                    // For example, assuming you have a div with id "privacyPolicyDiv":
+                    document.getElementById("privacyPolicyDiv").innerHTML = response;
+                }
+            };
+
+            // Send the data as a JSON string
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+</body>
+
+</html>
